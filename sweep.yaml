@@ -19,6 +19,6 @@ ci_cd_pipeline:
     - test
   steps:
     - checkout code
-    - setup JDK
-    - build with Maven
+    - setup JDK 1.8
+    - build with Maven 3.6.3
     - run tests

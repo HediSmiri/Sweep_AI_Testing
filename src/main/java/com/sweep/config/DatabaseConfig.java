@@ -11,13 +11,13 @@ import javax.sql.DataSource;
 public class DatabaseConfig {
 
     @Value("${spring.datasource.url}")
-    private String url;
+    private String url = "jdbc:mysql://localhost:3306/mydatabase";
 
     @Value("${spring.datasource.username}")
-    private String username;
+    private String username = "myusername";
 
     @Value("${spring.datasource.password}")
-    private String password;
+    private String password = "mypassword";
 
     @Bean
     public DataSource dataSource() {

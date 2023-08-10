@@ -16,9 +16,10 @@ ci_cd_pipeline:
   trigger: 'on push'
   jobs:
     - build
-    - test
-  steps:
-    - checkout code
-    - setup JDK
-    - build with Maven
-    - run tests
+    - test:
+        steps:
+          - checkout code
+          - setup JDK
+          - install dependencies
+          - set environment variables
+          - run test command

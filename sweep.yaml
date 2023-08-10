@@ -10,3 +10,15 @@ gha_enabled: True
 description: ''
 
 # Default Values: https://github.com/sweepai/sweep/blob/main/sweep.yaml
+
+# CI/CD pipeline configuration
+ci_cd_pipeline:
+  trigger: 'on push'
+  jobs:
+    - build
+    - test
+  steps:
+    - checkout code
+    - setup JDK
+    - build with Maven
+    - run tests

@@ -18,7 +18,10 @@ public class DataController {
 
     @PostMapping("/data")
     public void insertData(@RequestBody String data) {
-        dataService.insertData(data);
+        // Add null check for dataService
+        if (dataService != null) {
+            dataService.insertData(data);
+        }
     }
 
 }

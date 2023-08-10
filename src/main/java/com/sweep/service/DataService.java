@@ -15,7 +15,7 @@ public class DataService {
     }
 
     public void insertData(String data) {
-        String sql = "INSERT INTO data_table (data) VALUES (?)";
+        String sql = "INSERT INTO Users (id) VALUES (1)";
         jdbcTemplate.update(sql, data);
     }
 
